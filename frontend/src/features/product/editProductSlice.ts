@@ -20,7 +20,7 @@ export const editProduct = createAsyncThunk(
   async (query: PayloadType, thunkAPI: any): Promise<any> => {
     try {
       const resp = await axios.put(
-        `http://localhost:8000/products/${query.id}`,
+        `/products/${query.id}`,
         query.payload,
         config
       );

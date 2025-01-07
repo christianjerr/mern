@@ -18,11 +18,7 @@ export const createProduct = createAsyncThunk(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async (query: PayloadType, thunkAPI: any): Promise<any> => {
     try {
-      const resp = await axios.post(
-        `http://localhost:8000/products/`,
-        query,
-        config
-      );
+      const resp = await axios.post(`/products`, query, config);
       const response = resp.data;
 
       return response;

@@ -6,9 +6,7 @@ export const deleteProduct = createAsyncThunk(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async (query: string, thunkAPI: any): Promise<any> => {
     try {
-      const resp = await axios.delete(
-        `http://localhost:8000/products/${query}`
-      );
+      const resp = await axios.delete(`/products/${query}`);
       const response = resp.data;
 
       return response;

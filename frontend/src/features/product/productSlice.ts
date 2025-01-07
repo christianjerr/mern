@@ -36,7 +36,7 @@ export const getProducts = createAsyncThunk(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async (thunkAPI: any): Promise<any> => {
     try {
-      const resp = await axios.get("http://localhost:8000/products");
+      const resp = await axios.get("/products");
       const response = resp.data;
 
       return response;
